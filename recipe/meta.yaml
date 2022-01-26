@@ -11,7 +11,7 @@ source:
   sha256: e1447a6f083d139ec75e55598dc3300f65cd3baa012568ec1cc79e7de70f6860
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -33,6 +33,7 @@ test:
     - waver
     - waver.datasets
   commands:
+    - pip list
     - pip check
   requires:
     - pip
@@ -49,6 +50,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/napari
     - sofroniewn
-    - goanpeca
-    - jaimergp
